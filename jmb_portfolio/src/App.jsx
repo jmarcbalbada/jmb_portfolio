@@ -13,8 +13,8 @@ export const router = createBrowserRouter(
     <>
       <Route path="/" element={<Home />} />
       <Route path="" element={<Home />} />
-    </>
-  )
+    </>,
+  ),
 );
 
 export default router;
