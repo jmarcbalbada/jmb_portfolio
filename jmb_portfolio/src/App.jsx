@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import "./index.css";
 import {
@@ -9,6 +8,7 @@ import {
 import Home from "./pages/Home";
 
 export const router = createBrowserRouter(
+  // default "/, "" "
   createRoutesFromElements(
     <>
       <Route path="/" element={<Home />} />
