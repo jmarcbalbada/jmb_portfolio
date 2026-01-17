@@ -4,6 +4,7 @@ import { developerRoles, name } from "../data/info";
 import Button from "./Button";
 import useMobileCheck from "../hooks/useMobileCheck";
 import ExploreSection from "./Explore";
+import Footer from "./Footer";
 
 const Main = () => {
   const [text] = useTypewriter({
@@ -46,6 +47,7 @@ const Main = () => {
         )}
       </div>
       <ExploreSection learnMoreRef={learnMoreRef} isMobile={isMobile} />
+      <Footer />
     </>
   );
 };
