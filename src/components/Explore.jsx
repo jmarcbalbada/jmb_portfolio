@@ -11,16 +11,26 @@ const ExploreSection = ({ learnMoreRef, isMobile }) => {
           : "my-24 min-h-screen pr-48 pt-20 sm:pl-48"
       }
     >
-      <h2 className={isMobile ? "text-2xl" : "text-4xl"}>Explore</h2>
+      {!isMobile && (
+        <h2 className={isMobile ? "text-2xl" : "text-4xl"}>Explore</h2>
+      )}
 
-      <div className="mt-8 grid gap-8">
-        <div className="relative flex-col sm:flex-row">
+      <div className={isMobile ? "grid gap-8" : "mt-8 grid gap-8"}>
+        <div
+          className={
+            isMobile
+              ? "relative flex flex-col items-center"
+              : "relative flex-col sm:flex-row"
+          }
+        >
           {isMobile && (
-            <img
-              src="/jm.jpg"
-              alt="John Marc"
-              className="max-w-xs rounded-lg"
-            />
+            <div className="flex justify-center">
+              <img
+                src="/jm.jpg"
+                alt="John Marc"
+                className="max-w-xs rounded-lg"
+              />
+            </div>
           )}
 
           {!isMobile && (
@@ -62,7 +72,7 @@ const ExploreSection = ({ learnMoreRef, isMobile }) => {
             <p
               className={
                 isMobile
-                  ? "text-justify leading-relaxed"
+                  ? "text-left leading-relaxed"
                   : "text-justify leading-loose"
               }
             >
